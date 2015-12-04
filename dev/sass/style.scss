@@ -1,0 +1,82 @@
+/*
+	
+	Share selected
+
+*/
+
+/*---- Core styles ----*/
+.hs-list {
+	margin: 0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	z-index: 100;
+}
+
+.hs-list {
+	list-style: none;
+}
+
+.hs-is-visible {
+	display: block;
+}
+
+/*---- Optional button styles ----*/
+.hs-list {
+	* + * {
+		margin-left: 5px;
+	}
+}
+
+.hs-list li {
+	float: left;
+}
+
+.hs-list a {
+	/* Default button styles */
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	background: #999;
+	border-radius: 100%;
+
+	&:hover {
+		text-decoration: none;
+		background: darken(#999, 10);
+	}
+
+	/* Twitter button styles */
+	&[data-share="twitter"] {
+		background: #00aced;
+
+		&:visited {
+			background: #00aced;
+		}
+
+		&:hover {
+			background: darken(#00aced, 10);
+		}
+
+		&:before {
+			position: relative;
+			top: 5px;
+			content: url(../img/twitter.svg);
+			width: 40px;
+			max-width: 100%;
+		}
+	}
+
+	/* Email button styles */
+	&[data-share="email"] {
+		&:before {
+			position: relative;
+			top: 5px;
+			content: url(../img/envelope.svg);
+			width: 40px;
+			max-width: 100%;
+		}
+	}
+}
